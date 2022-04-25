@@ -1,4 +1,13 @@
+$primary: #ff7f00;
+$black2: #495057;
+
+@import 'bootstrap/bootstrap.scss';
+
 body{
-    background: black;
-    font-family: Arial, Helvetica, sans-serif;
+   font-family: 'Barlow', sans-serif;
+   color: $black2;
+}
+li{
+    color: aqua;
+    list-style:  none;
 }
