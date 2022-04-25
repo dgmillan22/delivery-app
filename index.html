@@ -19,13 +19,42 @@
                     <h1>New App</h1>
                 </div>
                 <div class="col-auto">
-                    <div class="avatar-container">
+                    <div class="avatar-container"data-bs-toggle="modal" data-bs-target="#profileOptions">
                         <img src="img/avatar.jpg" alt="">
                         <i class="fa-solid fa-gear"></i>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="modal fade" id="profileOptions" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">Opciones</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                  </button>
+                </div>
+
+                <div class="modal-body">
+                 <ul class="profile-options-list">
+                    <li>
+                       <a href="#"><i class="fas fa-user"></i>Mi perfil</a> 
+                    </li>
+                    <li>
+                        <a href="#"><i class="fas fa-map-market-alt"></i>Mis direcciones</a> 
+                     </li>
+                     <li>
+                        <a href="#"><i class="fas fa-credit-card"></i>Mis tarjetas</a> 
+                     </li>
+                     <li>
+                        <a href="#" class="text-danger"><i class="fas fa-times-cicle"></i>Cerrar sesión</a> 
+                     </li>
+                 </ul>
+                </div>
+              </div>
+            </div>
+          </div>
     </header>
     <script src="js/jquery.js"></script>
     <script src="js/popper.js"></script>
