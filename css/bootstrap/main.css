@@ -12494,7 +12494,7 @@ img {
   max-width: 100%;
 }
 
-a:hover {
+a:hover, .btn-link:hover {
   text-decoration: none;
 }
 
