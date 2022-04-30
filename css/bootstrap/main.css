@@ -12484,6 +12484,7 @@ textarea.form-control-lg {
 body {
   font-family: "Barlow", sans-serif;
   color: #495057;
+  text-decoration: none;
 }
 
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
@@ -12494,8 +12495,41 @@ img {
   max-width: 100%;
 }
 
+a, .btn-link {
+  text-decoration: none;
+}
 a:hover, .btn-link:hover {
   text-decoration: none;
+}
+
+.btn.btn-primary {
+  font-weight: 500;
+  color: #fff;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.section-title {
+  font-size: 20px;
+  text-align: center;
+  padding: 15px 0 30px;
+  position: relative;
+}
+.section-title::after {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 3px;
+  background: #ff7f00;
+  bottom: 15px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  border-radius: 4px;
 }
 
 header {
@@ -12503,6 +12537,11 @@ header {
   padding: 10px 0;
   -webkit-box-shadow: 0 5px 10px rgba(204, 204, 204, 0.31);
           box-shadow: 0 5px 10px rgba(204, 204, 204, 0.31);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
 }
 header h1, header .h1 {
   font-size: 24px;
@@ -12531,20 +12570,136 @@ header .avatar-container i {
   font-size: 20px;
   color: #ff7f00;
 }
-header .profile-options-modal .profile-options-list {
+
+.profile-options-modal .profile-options-list {
   padding: 0;
   margin: 0;
   list-style: none;
 }
-header .profile-options-modal .profile-options-list li a {
+.profile-options-modal .profile-options-list li a {
   display: block;
   padding: 10px 0;
   color: #495057;
   text-decoration: none;
 }
-header .profile-options-modal .profile-options-list li a i {
+.profile-options-modal .profile-options-list li a i {
   display: inline-block;
   width: 18px;
   text-align: center;
   margin-right: 5px;
+}
+
+.main {
+  padding-top: 80px;
+}
+
+.search-container {
+  padding-top: 30px;
+}
+.search-container input {
+  display: block;
+  width: 100%;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  padding: 8px 10px;
+  border-radius: 4px;
+}
+
+.products-list-container {
+  padding-top: 15px;
+}
+.products-list-container ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.products-list-container ul li {
+  border: 1px solid rgba(204, 204, 204, 0.31);
+  -webkit-box-shadow: 0px 5px 10px rgba(204, 204, 204, 0.31);
+          box-shadow: 0px 5px 10px rgba(204, 204, 204, 0.31);
+  background: #fff;
+  margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
+  text-decoration: none;
+}
+.products-list-container ul li .product-image img {
+  width: 100%;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+.products-list-container ul li .product-info {
+  padding: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+.products-list-container ul li .product-info .tags {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+}
+.products-list-container ul li .product-info .tags span {
+  display: block;
+  background: #ff7f00;
+  color: #fff;
+  border-radius: 10px;
+  margin-right: 7px;
+  font-size: 12px;
+  padding: 2px 10px;
+  font-weight: 500;
+}
+.products-list-container ul li .product-info .tags span:last-child {
+  margin-right: 0;
+}
+.products-list-container ul li .product-info .product-name {
+  font-weight: 300;
+  font-size: 20px;
+  color: #495057;
+}
+.products-list-container ul li .product-info .restaurant {
+  margin-bottom: 10px;
+  font-size: 11px;
+  color: #807e7e;
+  font-weight: 600;
+}
+.products-list-container ul li .product-info .stars {
+  margin-top: 5px;
+}
+.products-list-container ul li .product-info .stars i {
+  font-size: 13px;
+  color: yellow;
+}
+.products-list-container ul li .product-info .product-price {
+  font-size: 18px;
+  margin: 0;
+  font-weight: 300;
+  color: #495057;
+}
+.products-list-container ul li .product-info .product-price span {
+  font-size: 13px;
+  margin-right: 3px;
 }

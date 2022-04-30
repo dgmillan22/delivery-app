@@ -6,6 +6,7 @@ $black2: #495057;
 body{
    font-family: 'Barlow', sans-serif;
    color: $black2;
+   text-decoration: none;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -16,8 +17,39 @@ img{
     max-width: 100%;
 }
 a, .btn-link{
+    text-decoration: none;
     &:hover{
         text-decoration: none;
+    }
+}
+
+.btn.btn-primary{
+    font-weight: 500;
+    color: #fff;
+}
+
+.btn-block{
+    display: block;
+    width: 100%;
+}
+
+.section-title{
+    font-size: 20px;
+    text-align: center;
+    padding: 15px 0 30px;
+    position: relative;
+
+    &::after{
+        content: '';
+        position: absolute;
+        display: block;
+        width: 40px;
+        height: 3px;
+        background: $primary; 
+        bottom: 15px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 4px;
     }
 }
 
@@ -27,7 +59,11 @@ header{
     background: #fff;
     padding: 10px 0;
     box-shadow: 0 5px 10px rgba(204,204,204,0.31);
-
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
     h1{
         font-size: 24px;
         font-weight: 600;
@@ -54,27 +90,144 @@ header{
             font-size: 20px;
             color: $primary;
         }
+    } 
+}
+.profile-options-modal{
+    .profile-options-list{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        
+
+        li{
+            a{
+                display: block;
+                padding: 10px 0;
+                color: $black2;
+                text-decoration: none;
+
+                i{
+                    display: inline-block;
+                    width: 18px;
+                    text-align: center;
+                    margin-right: 5px;
+                }
+            }
+        }
     }
+}
 
-    .profile-options-modal{
-        .profile-options-list{
-            padding: 0;
-            margin: 0;
-            list-style: none;
-            
+//main
 
-            li{
-                a{
-                    display: block;
-                    padding: 10px 0;
+.main{
+    padding-top: 80px;
+    
+}
+
+.search-container{
+    padding-top: 30px;
+
+    input{
+        display: block;
+        width: 100%;
+        margin-bottom: 10px;
+        border: 1px solid #ccc;
+        font-size: 14px;
+        padding: 8px 10px;
+        border-radius: 4px;
+    }
+}
+
+.products-list-container{
+    padding-top: 15px;
+    
+    ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+
+        li{
+            border: 1px solid rgba(204,204,204, 0.31);
+            box-shadow: 0px 5px 10px rgba(204,204,204, 0.31);
+            background: #fff;
+            margin-bottom: 20px;
+            border-radius: 4px;
+            overflow: hidden;
+            text-decoration: none;
+
+            .product-image{
+                img{
+                    width: 100%;
+                    height: 140px;
+                    object-fit: cover;
+                    object-position: center;
+                }
+            }
+
+            .product-info{
+                padding: 20px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                position: relative;
+
+                .tags{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: absolute;
+                    top: -10px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 100%;
+
+                    span{
+                        display: block;
+                        background: $primary;
+                        color: #fff;
+                        border-radius: 10px;
+                        margin-right: 7px;
+                        font-size: 12px;
+                        padding: 2px 10px;
+                        font-weight: 500;
+
+                        &:last-child{
+                            margin-right: 0;
+                        }
+                    }
+                }
+
+                .product-name{
+                    font-weight: 300;
+                    font-size: 20px;
                     color: $black2;
-                    text-decoration: none;
+                }
+
+                .restaurant{
+                    margin-bottom: 10px;
+                    font-size: 11px;
+                    color: #807e7e;
+                    font-weight: 600;
+                }
+
+                .stars{
+                    margin-top: 5px;
 
                     i{
-                        display: inline-block;
-                        width: 18px;
-                        text-align: center;
-                        margin-right: 5px;
+                        font-size: 13px;
+                        color: yellow;
+                    }
+                }
+
+                .product-price{
+                    font-size: 18px;
+                    margin: 0;
+                    font-weight: 300;
+                    color: $black2;
+
+                    span{
+                        font-size: 13px;
+                        margin-right: 3px;
                     }
                 }
             }
